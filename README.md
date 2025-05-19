@@ -1,4 +1,4 @@
-# Fuzzy Diabetes - Fuzzy Diabetes Prediction Tool
+# Fuzzy Diabetes - Diabetes Risk Assessment Tool
 
 Fuzzy Diabetes is a fuzzy logic-based intelligent tool for predicting diabetes risk. Built from a research-backed approach using ANFIS and classical machine learning models (KNN, SVM, RF), it allows users to enter key health metrics and receive real-time risk assessment.
 
@@ -33,13 +33,13 @@ The following models were trained and evaluated:
 #### Model Accuracy Comparison
 
 <p align="center">
-  <img src="model/Comparison/accuracy_comparison.png" width="400">
+  <img src="https://github.com/superorange0707/Fuzzy_Diabetes/blob/main/Model/Comparison/accuracy_comparison.png" width="400">
 </p>
 
 #### ROC Curves
 
 <p align="center">
-  <img src="model/Comparison/auc_curves.png" width="400">
+  <img src="https://github.com/superorange0707/Fuzzy_Diabetes/blob/main/Model/Comparison/auc_curves.png" width="400">
 </p>
 
 
@@ -49,20 +49,62 @@ The following models were trained and evaluated:
 
 * Web interface via Streamlit
 * Takes user input for 4 health features
+* Optional blood glucose input
+* BMI calculation from height and weight
+* Diabetes Pedigree Function estimation from family history
 * Outputs real-time diabetes risk result with probability
-* Built-in rules based on fuzzy membership functions
+* Interactive visualizations of risk factors
+* Batch assessment mode for multiple records
+* Export results as CSV
 
-To run locally:
+## Installation and Setup
 
+### Prerequisites
+* Python 3.7+
+* pip package manager
+
+### Quick Start
+
+1. Clone this repository:
+```bash
+git clone https://github.com/superorange0707/fuzzy-diabetes.git
+cd fuzzy-diabetes
+```
+
+2. Run the setup script:
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+This will:
+- Create a virtual environment
+- Install all required dependencies
+- Start the Streamlit application
+
+### Manual Setup
+
+1. Create a virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
+```
+
+3. Run the application:
+```bash
+cd app
 streamlit run app.py
 ```
 
-To deploy online:
+### Deployment Options
 
-* [Streamlit Cloud](https://streamlit.io/cloud)
-* [Hugging Face Spaces](https://huggingface.co/spaces) (Streamlit template)
+- [Streamlit Cloud](https://streamlit.io/cloud)
+- [Hugging Face Spaces](https://huggingface.co/spaces) (Streamlit template)
 
 ---
 
@@ -70,24 +112,30 @@ To deploy online:
 
 ```
 fuzzy-diabetes/
-├── Model
-│   ├── anfis_model.pt
-│   ├── Comparison
-│   │   ├── accuracy_comparison.png
-│   │   ├── auc_curves.png
-│   │   └── f1_auc_table.png
-│   ├── diabetes.csv
-│   ├── knn_model.pkl
-│   ├── rf_model.pkl
-│   └── svm_model.pkl
-├── Notebook
-│   └── models_pipeline.ipynb
-├── Paper
-│   ├── ANFIS_DIabets.pdf
-│   └── Fuzzy_model.R
+├── Model/
+│   ├── anfis_model.pt
+│   ├── Comparison/
+│   │   ├── accuracy_comparison.png
+│   │   ├── auc_curves.png
+│   │   └── f1_auc_table.png
+│   ├── diabetes.csv
+│   ├── knn_model.pkl
+│   ├── rf_model.pkl
+│   └── svm_model.pkl
+├── app/
+│   ├── app.py
+│   ├── utils.py
+│   ├── style.css
+│   └── logo_placeholder.py
+├── requirements.txt
+├── run.sh
 └── README.md
-
 ```
 
+## Disclaimer
+
+This tool is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for medical concerns.
+
 ---
+
 

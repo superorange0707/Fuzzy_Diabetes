@@ -1,0 +1,116 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #0066FF;
+  --primary-light: #E6F0FF;
+  --accent-color: #00C2FF;
+  --text-color: #1A1A2E;
+  --bg-color: #FFFFFF;
+  --card-bg: #F8F9FA;
+  --border-color: #E5E7EB;
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --danger-color: #EF4444;
+  --low-risk: #10B981;
+  --medium-risk: #F59E0B;
+  --high-risk: #EF4444;
+}
+
+/* Custom Streamlit Styling */
+.stApp {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* Card styling */
+.card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+.stButton > button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+  background-color: #0052cc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields */
+.stTextInput > div > div > input {
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.stNumberInput > div > div > input {
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+/* Results section */
+.result-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.result-low {
+  background-color: rgba(16, 185, 129, 0.1);
+  border: 1px solid var(--low-risk);
+}
+
+.result-medium {
+  background-color: rgba(245, 158, 11, 0.1);
+  border: 1px solid var(--medium-risk);
+}
+
+.result-high {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--high-risk);
+}
+
+/* Footer styling */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+/* Risk meter */
+.risk-meter {
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, var(--low-risk), var(--medium-risk), var(--high-risk));
+}
+
+/* Disclaimer */
+.disclaimer {
+  background-color: #FEFEFE;
+  border: 1px solid #EEE;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 30px;
+}
